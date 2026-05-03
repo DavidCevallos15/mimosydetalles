@@ -1,0 +1,7 @@
+{
+  "skills": {
+    "search_paths": [
+      "./.agents/skills"
+    ]
+  }
+}

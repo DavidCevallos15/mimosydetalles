@@ -1,0 +1,238 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--background) 0%, #f3ede2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Routes / Selector */
+.routes {
+  padding: 6rem 0;
+  background-color: var(--surface);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.cardImageWrapper {
+  height: 200px;
+  width: 100%;
+  background-color: #f1f5f9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Placeholders for real images */
+.cardImageB2b { width: 100%; height: 100%; background: linear-gradient(to right, #475569, #334155); }
+.cardImageSocial { width: 100%; height: 100%; background: linear-gradient(to right, #f472b6, #fb7185); }
+.cardImageGift { width: 100%; height: 100%; background: linear-gradient(to right, #fbbf24, #f59e0b); }
+
+.cardContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.cardContent h3 {
+  font-size: 1.25rem;
+}
+
+.cardContent p {
+  color: var(--text-light);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.cardAction {
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: auto;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.card:hover .cardAction {
+  transform: translateX(5px);
+}
+
+/* Differentiators */
+.differentiators {
+  padding: 5rem 0;
+  background-color: var(--secondary);
+  color: white;
+}
+
+.diffGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+.diffItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diffIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.diffItem h4 {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.diffItem p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Workflow */
+.workflow {
+  padding: 6rem 0;
+  background-color: var(--surface);
+}
+
+.steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 5px var(--surface);
+}
+
+.step p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 200px;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background-color: #e2e8f0;
+  margin-top: 25px; /* align with center of circle */
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .stepLine {
+    display: none;
+  }
+}

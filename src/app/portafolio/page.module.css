@@ -1,0 +1,89 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--background) 0%, #e2e8f0 100%);
+  text-align: center;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-light);
+}
+
+.gallerySection {
+  padding: 5rem 0;
+  background-color: var(--surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.portfolioCard {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.portfolioImage {
+  height: 250px;
+  background-color: #f1f5f9;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.portfolioInfo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.portfolioInfo h3 {
+  font-size: 1.25rem;
+}
+
+.portfolioInfo p {
+  color: var(--text-light);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}

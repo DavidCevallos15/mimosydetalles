@@ -1,0 +1,4 @@
+name: vercel-react-best-practices
+version: 1.0.0
+description: Reglas de optimización de Vercel para React y Next.js
+entrypoint: ./rules

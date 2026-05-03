@@ -1,0 +1,121 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: var(--secondary);
+  text-align: center;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Catalog */
+.catalog {
+  padding: 4rem 0 8rem;
+  background-color: var(--background);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.filterBtn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover, .filterBtn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.productCard {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.productImage {
+  height: 250px;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.productInfo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.productInfo h3 {
+  font-size: 1.2rem;
+}
+
+.productInfo p {
+  color: var(--text-light);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.productActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary);
+}

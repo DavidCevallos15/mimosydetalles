@@ -1,0 +1,115 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(244, 114, 182, 0.4), rgba(251, 113, 133, 0.8)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop') center/cover;
+  color: white;
+  text-align: center;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  align-items: center;
+  margin: 0 auto;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.hero h1 {
+  color: white;
+}
+
+/* Gallery Masonry */
+.gallery {
+  padding: 5rem 0;
+  background-color: var(--background);
+}
+
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 1.5rem;
+}
+
+.galleryItem {
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fbcfe8, #f472b6);
+}
+
+.galleryItem:hover {
+  transform: scale(1.02);
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 5rem 0;
+  background-color: var(--surface);
+}
+
+.testimonyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.testimonyCard {
+  background: var(--background);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.author {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .wide {
+    grid-column: span 1;
+  }
+}
